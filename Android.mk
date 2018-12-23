@@ -10,10 +10,10 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := lua
 
+#Includes
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/src
 
-LOCAL_SRC_FILES := \
-	$(subst $(LOCAL_PATH)/,, \
-	$(wildcard $(LOCAL_PATH)/src/*.c))
+#Sources
+LOCAL_SRC_FILES := $(subst $(LOCAL_PATH)/,, $(wildcard $(LOCAL_PATH)/src/*.c))
 
 include $(BUILD_STATIC_LIBRARY)
